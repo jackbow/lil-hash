@@ -1,0 +1,1 @@
+export SANIC_ENV=dev
