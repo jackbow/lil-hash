@@ -1,3 +1,7 @@
+# Vite
+dist
+dist-ssr
+
 # Created by https://www.toptal.com/developers/gitignore/api/vue,macos,linux,node,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=vue,macos,linux,node,python
 
