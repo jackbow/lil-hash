@@ -1,19 +1,55 @@
 {
-  "name": "url-hash",
+  "name": "lil-hash",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^3.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^10.2.3",
+    "eslint": "^7.18.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.4.1",
+    "lint-staged": "^10.5.3",
     "postcss": "^8.2.4",
+    "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
     "vite": "^2.0.0-beta.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:vue/vue3-recommended",
+      "@vue/prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "max-len": ["error", { "code": 120 }]
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "npx prettier --write .",
+      "git add"
+    ]
   }
 }
