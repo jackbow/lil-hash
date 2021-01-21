@@ -1,6 +1,12 @@
-lilhash.com
+(strip-www) {
+  @www.{args.0} host www.{args.0}
+  redir @www.{args.0} https://{args.0}{uri}
+}
 
-encode zstd gzip
-root / ./app/frontend/dist
-reverse_proxy /.* 127.0.0.1:8000
-file_server
+lilhash.com {
+  import strip-www lilhash.com
+  encode zstd gzip
+  root / ./app/frontend/dist
+  reverse_proxy /.* 127.0.0.1:8000
+  file_server
+}
