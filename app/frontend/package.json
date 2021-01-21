@@ -1,42 +1,60 @@
 {
-  "name": "lil-hash",
+  "name": "svelte-frontend",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "svite",
+    "build": "svite build"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "vue": "^3.0.5"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.0.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "autoprefixer": "^10.2.3",
-    "eslint": "^7.18.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.4.1",
+    "eslint-plugin-svelte3": "^3.0.0",
     "lint-staged": "^10.5.3",
-    "postcss": "^8.2.4",
+    "postcss": "^7.0.35",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.2",
-    "vite": "^2.0.0-beta.12"
+    "prettier-plugin-svelte": "^2.1.1",
+    "svelte": "^3.29.7",
+    "svelte-hmr": "^0.11.6",
+    "svelte-preprocess": "^4.6.1",
+    "svite": "^0.8.1",
+    "tailwindcss": "compat"
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
     },
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "plugins": [
+      "svelte3"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.svelte"
+        ],
+        "processor": "svelte3/svelte3"
+      }
+    ],
     "extends": [
       "eslint:recommended",
-      "plugin:prettier/recommended",
-      "plugin:vue/vue3-recommended",
-      "@vue/prettier"
+      "plugin:prettier/recommended"
     ],
     "rules": {
       "prettier/prettier": "error",
-      "max-len": ["error", { "code": 120 }]
+      "max-len": [
+        "error",
+        {
+          "code": 120
+        }
+      ]
     }
   },
   "prettier": {
