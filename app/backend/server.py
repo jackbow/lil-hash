@@ -7,7 +7,7 @@ import random
 import redis
 
 app = Sanic("lil' hash")
-if app.config.ENV == "dev":
+if hasattr(app.config, 'ENV') and app.config.ENV == "dev":
     cors = CORS(app, resources={r"/*": {"origins": "http://localhost:*"}})
 rdb = redis.Redis(host='localhost', port=6379, db=0)
 
