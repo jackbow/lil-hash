@@ -4,7 +4,7 @@
 
 CD into `app/backend`, run `install.sh`, [install redis](https://redis.io/download) [install caddysever](https://caddyserver.com/docs/install). Next run `redis-server ./redis.conf`, `sanic server.app`, `caddy reverse-proxy --from example.com --to localhost:8000` in separate terminals, replacing example.com with your url.
 
-## API
+### API
 
 #### /hash/\<hours\>/\<encoded url\>
 
