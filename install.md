@@ -15,7 +15,7 @@ sudo echo "vm.swappiness=20" >> /etc/sysctl.conf
 
 ### git, tmux
 
-use tmux to run the following sections separately
+Use tmux to run the following sections separately.
 
 ```
 sudo apt-get install -y tmux git
