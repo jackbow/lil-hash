@@ -1,0 +1,6 @@
+lilhash.com
+
+encode zstd gzip
+root / ./app/frontend/dist
+reverse_proxy /.* 127.0.0.1:8000
+file_server

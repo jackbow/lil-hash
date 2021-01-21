@@ -8,7 +8,7 @@ import redis
 
 app = Sanic("lil' hash")
 if hasattr(app.config, 'ENV') and app.config.ENV == "dev":
-    cors = CORS(app, resources={r"/*": {"origins": "http://localhost:*"}})
+    cors = CORS(app, resources={r"/*": {"origins": "*"}})
 rdb = redis.Redis(host='localhost', port=6379, db=0)
 
 @app.get("/<key:string>")
