@@ -1,19 +1,19 @@
 <script>
 import axios from "axios";
 const HOURS = 24;
+const SERVER = "https://lilhash.com"
 let inputUrl = ""
 let hashedUrl = ""
 let error = false
-let server = import.meta.env.VITE_SERVER_URL || "http://localhost:8000"
 $: hashed = hashedUrl.length > 0;
 const hash = () => {
   console.log("hashing...");
   // eslint-disable-next-line
-  axios.post(`${server}/hash?url=${encodeURIComponent(inputUrl)}&hours=${HOURS}`)
+  axios.post(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}&hours=${HOURS}`)
     .then((response) => {
       console.log("hashed!");
-      const protocol_index = server.indexOf("://");
-      hashedUrl = server.slice(protocol_index + 3) + "/" + response.data.key;
+      const protocol_index = SERVER.indexOf("://");
+      hashedUrl = SERVER.slice(protocol_index + 3) + "/" + response.data.key;
       error = false;
     })
     .catch(() => {
