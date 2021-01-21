@@ -6,7 +6,7 @@ from wordlist import words
 import random
 import redis
 
-app = Sanic("url-hash")
+app = Sanic("lil' hash")
 if app.config.ENV == "dev":
     cors = CORS(app, resources={r"/*": {"origins": "http://localhost:*"}})
 rdb = redis.Redis(host='localhost', port=6379, db=0)
