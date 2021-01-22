@@ -7,11 +7,9 @@ let hashedUrl = ""
 let error = false
 $: hashed = hashedUrl.length > 0;
 const hash = () => {
-  console.log("hashing...");
   // eslint-disable-next-line
   axios.post(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}&hours=${HOURS}`)
     .then((response) => {
-      console.log("hashed!");
       const protocol_index = SERVER.indexOf("://");
       hashedUrl = SERVER.slice(protocol_index + 3) + "/" + response.data.key;
       error = false;
