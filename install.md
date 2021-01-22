@@ -33,8 +33,9 @@ curl https://pyenv.run | bash # make sure to follow instructions at the end
 LATEST=$(pyenv install --list | grep "3\." | grep -v - | grep -v b | tail -1)
 pyenv install $LATEST
 pyenv global $LATEST
-cd app/backend
-python -m pip install -r requirements.txt
+cd app
+pip install wheel
+pip install -r requirements.txt
 sanic server.app
 ```
 
