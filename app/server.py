@@ -1,5 +1,5 @@
 from sanic import Sanic
-from sanic.response import json, redirect, empty, file
+from sanic.response import json, redirect, text, file
 from sanic_cors import CORS, cross_origin
 from sanic_brotli import Compress
 from urllib.parse import unquote
@@ -36,7 +36,7 @@ async def unhash_url(request, key: str):
             url = "http://" + url
         return redirect(url)
     else:
-        return empty(status=404)
+        return text("sorry, link expired", status=404)
 
 @app.post("/hash")
 async def hash_url(request):
