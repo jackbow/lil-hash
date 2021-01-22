@@ -46,7 +46,7 @@ npm i; npm run build
 
 ### caddy
 ```
-sudo apt-get install caddy
+curl -sS https://webinstall.dev/caddy | bash
 CADDY_VERSION=$(ls ~/.local/opt/ | grep caddy)
 sudo setcap cap_net_bind_service=+ep ~/.local/opt/$CADDY_VERSION/bin/caddy
 caddy run
