@@ -6,5 +6,4 @@
 lilhash.com {
   import strip-www lilhash.com
   reverse_proxy * 127.0.0.1:8000
-  file_server
 }
