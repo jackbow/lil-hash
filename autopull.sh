@@ -13,4 +13,4 @@ fi
 
 # crontab
 # remember to chmod +x ./autopull.sh
-# 0 0 * * * * ~/lil-hash/autopull.sh
+# 0 0 * * * ~/lil-hash/autopull.sh
