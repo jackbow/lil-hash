@@ -22,33 +22,30 @@ const hash = () => {
 </script>
 
 {#if !hashed}
-<h1 class="text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
-<p class="text-2xl font-averia dark:text-white">
+<h1 class="text-4xl md:text-6xl lg:text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
+<p class="text-xl lg:text-2xl font-averia dark:text-white">
   simple sharable url shortener
 </p>
 <input
   bind:value={inputUrl}
-  class="shadow-inner rounded-md text-2xl p-4 m-4 w-1/2 text-center my-10"
+  class="shadow-inner rounded-md text-md w-3/5 md:w-1/2 lg:text-2xl p-2 md:p-3 lg:p-4 m-4 lg:my-10 text-center"
   on:keyup={(e) => e.key==='Enter' && hash()}
 />
 <button
-  class="bg-white shadow px-8 py-4 text-2xl rounded-md transition duration-500"
+  class="px-3 md:px-5 lg:px-8 py-2 md:py-3 lg:py-4 text-md lg:text-2xl rounded-md transition duration-500 bg-white shadow"
   class:bg-red-500={error}
   on:click={hash}
 >
   { error ? "try again" : "hash" }
 </button>
 {:else}
-<p class="truncate mx-96 text-4xl font-averia mt-40 dark:text-white">
-  { inputUrl }
+<p class="text-md md:text-lg lg:text-2xl my-4 mt-40 font-averia dark:text-white">
+  your link been shortened to
 </p>
-<p class="text-2xl my-4 font-averia dark:text-white">
-  has been shortened to
-</p>
-<p class="text-8xl font-averia dark:text-white">
+<p class="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-averia dark:text-white">
   { hashedUrl }
 </p>
-<p class="text-2xl my-8 font-averia dark:text-white">
+<p class="text-md md:text-lg lg:text-2xl m-4 md:m-5 lg:m-8 font-averia dark:text-white">
   for the next 24 hours
 </p>
 {/if}
