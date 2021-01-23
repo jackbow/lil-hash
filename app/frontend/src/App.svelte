@@ -22,8 +22,8 @@ const hash = () => {
 </script>
 
 {#if !hashed}
-<h1 class="text-4xl md:text-6xl lg:text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
-<p class="text-xl lg:text-2xl font-averia dark:text-white">
+<h1 class="text-off-black text-4xl text-black md:text-6xl lg:text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
+<p class="text-off-black text-xl text-black lg:text-2xl font-averia dark:text-white">
   simple sharable url shortener
 </p>
 <input
@@ -39,18 +39,21 @@ const hash = () => {
   { error ? "try again" : "hash" }
 </button>
 {:else}
-<p class="text-md md:text-lg lg:text-2xl my-4 mt-40 font-averia dark:text-white">
+<p class="text-off-black text-xl md:text-lg lg:text-2xl my-4 mt-40 font-averia dark:text-white">
   your link been shortened to
 </p>
-<p class="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-averia dark:text-white">
+<h1 class="text-off-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-averia dark:text-white">
   { hashedUrl }
-</p>
-<p class="text-md md:text-lg lg:text-2xl m-4 md:m-5 lg:m-8 font-averia dark:text-white">
+</h1>
+<p class="text-off-black text-xl md:text-lg lg:text-2xl m-4 md:m-5 lg:m-8 font-averia dark:text-white">
   for the next 24 hours
 </p>
 {/if}
 
 <style>
+.text-off-black {
+  color: #35332c;
+}
 .font-averia {
   font-family: "Averia Serif";
   font-weight: 300;
