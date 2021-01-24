@@ -22,11 +22,11 @@ const hash = () => {
 </script>
 
 {#if !hashed}
-<h1 class="text-off-black text-4xl text-black md:text-6xl lg:text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
+<h1 class="text-off-black text-7xl text-black lg:text-8xl font-averia mt-40 dark:text-white">lil' hash</h1>
 <p class="text-off-black text-xl text-black lg:text-2xl font-averia dark:text-white">
   simple sharable url shortener
 </p>
-<label for="url" class="visuallyhidden">URL: </label>
+<label for="url" class="hidden">URL: </label>
 <input
   name="url"
   bind:value={inputUrl}
