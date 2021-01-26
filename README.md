@@ -1,5 +1,12 @@
-# lil' hash
+# [lil' hash](lilhash.com)
 A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
+![screenshot](https://i.imgur.com/gBwgUKS.png)
+
+## Tech
+- [Svelte](https://svelte.dev/) -- frontend
+- [Tailwindcss](https://tailwindcss.com/) -- styling
+- [Vite](https://vitejs.dev/) -- frontend tooling
+- [Sanic](https://sanicframework.org/) -- backend
 
 ## Installation
 See install.md
