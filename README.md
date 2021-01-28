@@ -13,7 +13,7 @@ See install.md
 
 ### API
 
-#### /hash/\<hours\>/\<encoded url\>
+#### POST /hash?url={encoded url}&hours={hours}
 
 Associates a word with a url for the given number of hours. Response comes in the following format.
 
@@ -24,6 +24,6 @@ Associates a word with a url for the given number of hours. Response comes in th
 }
 ```
 
-#### /\<key\>
+#### GET /\<key\>
 
 Redirects to the mapped URL if in the database, otherwise returns a 404 error.
