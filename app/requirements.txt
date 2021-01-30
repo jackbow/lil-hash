@@ -1,4 +1,0 @@
-brotli
-redis
-sanic
-sanic_cors

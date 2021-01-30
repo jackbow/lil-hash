@@ -13,12 +13,12 @@ sudo echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 sudo echo "vm.swappiness=20" >> /etc/sysctl.conf
 ```
 
-### git, tmux
+### git, tmux, redis
 
 Use tmux to run the following sections separately.
 
 ```
-sudo apt-get install -y tmux git
+sudo apt-get install -y tmux git redis
 git clone https://github.com/jackbow/lil-hash.git
 cd lil-hash
 tmux
@@ -26,27 +26,14 @@ tmux
 
 ### backend
 ```
-sudo apt-get install -y redis build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-curl https://pyenv.run | bash
-echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-exec $SHELL
-LATEST=$(pyenv install --list | grep "3\." | grep -v - | grep -v b | tail -1)
-pyenv install $LATEST
-pyenv global $LATEST
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+nvm install 14
 cd app
-pip install wheel
-pip install -r requirements.txt
-sanic server.app
+npm i; npm run serve
 ```
 
 ### frontend
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-nvm install 14
 cd app/frontend
 npm i; npm run build
 ```

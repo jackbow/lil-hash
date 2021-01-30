@@ -1,1 +1,2 @@
-export SANIC_ENV=dev
+FASTIFY_ENV=dev # disables CORS
+FASTIFY_LOG_PW=very-long-and-secure-password

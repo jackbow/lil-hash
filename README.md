@@ -5,22 +5,22 @@ A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 ## Tech
 - [Svelte](https://svelte.dev/) -- frontend
 - [Tailwindcss](https://tailwindcss.com/) -- styling
-- [Vite](https://vitejs.dev/) -- frontend tooling
-- [Sanic](https://sanicframework.org/) -- backend
+- [Vite](https://vitejs.dev/) -- frontend tooling (through [svite](https://github.com/dominikg/svite))
+- [Fastify](https://fastify.io/) -- backend
 
 ## Installation
 See install.md
 
-### API
+### Usage
 
-#### POST /hash?url={encoded url}&hours={hours}
+#### POST /hash?url={encoded url}
 
-Associates a word with a url for the given number of hours. Response comes in the following format.
+Associates a word with a url. Response comes in the following format.
 
 ```javascript
 {
   "key": key,
-  "duration_hours": duration_hours
+  "hours": hours_til_expiration
 }
 ```
 

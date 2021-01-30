@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^3.11.0",
+    "fastify-compress": "^3.4.1",
+    "fastify-cors": "^5.2.0",
+    "fastify-helmet": "^5.2.0",
+    "fastify-rate-limit": "^5.0.1",
+    "fastify-static": "^3.4.0",
+    "ioredis": "^4.19.4",
+    "make-promises-safe": "^5.1.0",
+    "st": "^2.0.0"
+  }
+}
