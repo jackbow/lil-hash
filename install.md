@@ -32,7 +32,7 @@ cd app
 # copy env_sample to .env and modify values!
 npm i
 npm run serve | grep -v FST_ERR_PROMISE_NOT_FULFILLED > log
-# dev: npm i -g pino-pretty; npm run serve | pino-pretty > log
+# dev: npm i -g pino-pretty; npm run dev
 ```
 
 ### frontend
