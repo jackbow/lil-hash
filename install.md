@@ -29,7 +29,9 @@ tmux
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 nvm install 14
 cd app
-npm i; npm run serve
+npm i
+npm i -g pino-pretty
+npm run serve | pino-pretty > log
 ```
 
 ### frontend
