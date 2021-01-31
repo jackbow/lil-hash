@@ -29,9 +29,10 @@ tmux
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 nvm install 14
 cd app
+# copy env_sample to .env and modify values!
 npm i
-npm i -g pino-pretty
-npm run serve | pino-pretty > log
+npm run serve | grep -v FST_ERR_PROMISE_NOT_FULFILLED > log
+# dev: npm i -g pino-pretty; npm run serve | pino-pretty > log
 ```
 
 ### frontend

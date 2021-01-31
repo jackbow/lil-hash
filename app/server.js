@@ -21,7 +21,19 @@ const STATIC_ROOT_REGEX = /^.+\.(ico|svg|png)$/; // regex for files in static ro
 
 const redis = new Redis();
 const app = fastify({
-  logger: true,
+  logger: {
+    level: 'info',
+    serializers: {
+      req (request) {
+        return {
+          url: request.url,
+          "user-agent": request.headers["user-agent"],
+          referer: request.headers["referer"],
+          remoteAddress: request.ip,
+        };
+      },
+    },
+  },
 });
 
 if (process.env.FASTIFY_ENV === 'dev') {

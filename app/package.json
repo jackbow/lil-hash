@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "serve": "node server.js"
+    "serve": "node server.js | grep -v FST_ERR_PROMISE_NOT_FULFILLED > log",
+    "dev": "node server.js | pino-pretty"
   },
   "type": "module",
   "author": "",
