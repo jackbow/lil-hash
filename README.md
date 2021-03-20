@@ -11,22 +11,5 @@ A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 - [Vite](https://vitejs.dev/) -- frontend tooling (through [svite](https://github.com/dominikg/svite))
 - [Fastify](https://fastify.io/) -- backend
 
-## Installation
-See install.md
-
-### Usage
-
-#### POST /hash?url={encoded url}
-
-Associates a word with a url. Response comes in the following format.
-
-```javascript
-{
-  "key": key,
-  "hours": hours_til_expiration
-}
-```
-
-#### GET /\<key\>
-
-Redirects to the mapped URL if in the database, otherwise returns a 404 error.
+## Hosting
+See hosting.md
