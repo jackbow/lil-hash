@@ -2,6 +2,9 @@
 A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 ![screenshot](https://i.imgur.com/gBwgUKS.png)
 
+## To do
+- [ ] Route on hash so back button works as expected.
+
 ## Tech
 - [Svelte](https://svelte.dev/) -- frontend
 - [Tailwindcss](https://tailwindcss.com/) -- styling
