@@ -8,7 +8,7 @@ A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 ## Tech
 - [Svelte](https://svelte.dev/) -- frontend
 - [Tailwindcss](https://tailwindcss.com/) -- styling
-- [Vite](https://vitejs.dev/) -- frontend tooling (through [svite](https://github.com/dominikg/svite))
+- [Vite](https://vitejs.dev/) -- frontend tooling
 - [Fastify](https://fastify.io/) -- backend
 
 ## Hosting
