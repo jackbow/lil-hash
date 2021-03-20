@@ -12,4 +12,4 @@ A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 - [Fastify](https://fastify.io/) -- backend
 
 ## Hosting
-See hosting.md
+See [hosting.md](https://github.com/jackbow/lil-hash/blob/main/hosting.md)
