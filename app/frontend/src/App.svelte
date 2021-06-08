@@ -1,5 +1,4 @@
 <script>
-import axios from "axios";
 const SERVER = "https://lilhash.com";
 let hours = 24;
 let inputUrl = "";
@@ -7,17 +6,19 @@ let hashedUrl = "";
 let error = false;
 $: hashed = hashedUrl.length > 0;
 const hash = () => {
-  axios
-    .post(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}`)
-    .then((response) => {
-      const protocol_index = SERVER.indexOf("://");
-      hashedUrl = SERVER.slice(protocol_index + 3) + "/" + response.data.key;
-      hours = response.data.hours;
-      error = false;
-    })
-    .catch(() => {
-      error = true;
-    });
+  fetch(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}`, {
+    method: 'POST',
+  })
+  .then(response => response.json())
+  .then((data) => {
+    const protocol_index = SERVER.indexOf("://");
+    hashedUrl = SERVER.slice(protocol_index + 3) + "/" + data.key;
+    hours = data.hours;
+    error = false;
+  })
+  .catch(() => {
+    error = true;
+  });
 };
 const selectHashedUrl = () => {
   const selection = window.getSelection();
