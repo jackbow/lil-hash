@@ -4,6 +4,8 @@ services:
     build: .
     env_file:
       - env
+    environment:
+      - FASTIFY_REDIS_URL=redis://redis:6379
     expose:
       - "8000"
   redis:

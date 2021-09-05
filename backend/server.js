@@ -19,7 +19,7 @@ const EXPIRATION_IN_HOURS = 24;
 const EXPIRATION_IN_SECONDS = EXPIRATION_IN_HOURS * 60 * 60; // * 60; // time till link expires
 const STATIC_ROOT_REGEX = /^.+\.(ico|svg|png)$/; // regex for files in static root (./dist)
 
-const redis = new Redis({ host: 'redis' });
+const redis = new Redis(process.env.FASTIFY_REDIS_URL);
 const app = fastify({
   logger: {
     level: 'info',
