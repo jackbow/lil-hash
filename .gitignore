@@ -1,3 +1,6 @@
+# fly.io
+fly.toml
+
 # Vite
 dist
 dist-ssr
@@ -31,7 +34,6 @@ log
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
