@@ -1,5 +1,5 @@
 <script>
-  const SERVER = "https://lilhash.com";
+  const SERVER = "https://localhost";
   let hours = 24;
   let inputUrl = "";
   let hashedUrl = "";

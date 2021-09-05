@@ -1,2 +1,5 @@
-export ENVIRONMENT=DEV      # either DEV or PROD
-export DOMAIN="lilhash.com" # unused if ENVIRONMENT set to DEV
+export ENVIRONMENT=DEV # either DEV or PROD
+export DOMAIN="localhost"
+
+# for fastify to access the environment var
+export FASTIFY_ENV=$ENVIRONMENT

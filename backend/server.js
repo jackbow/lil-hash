@@ -36,7 +36,7 @@ const app = fastify({
   },
 });
 
-if (process.env.FASTIFY_ENV === 'dev') {
+if (process.env.FASTIFY_ENV === 'DEV') {
   app.register(cors, {
     origin: (origin, cb) => {
       cb(null, true);
@@ -87,4 +87,5 @@ const start = async () => {
     process.exit(1);
   }
 };
+console.log(`Environment: ${process.env.FASTIFY_ENV}`)
 start();
