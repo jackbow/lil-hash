@@ -1,30 +1,30 @@
 <script>
-const SERVER = "https://lilhash.com";
-let hours = 24;
-let inputUrl = "";
-let hashedUrl = "";
-let error = false;
-$: hashed = hashedUrl.length > 0;
-const hash = () => {
-  fetch(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}`, {
-    method: 'POST',
-  })
-  .then(response => response.json())
-  .then((data) => {
-    const protocol_index = SERVER.indexOf("://");
-    hashedUrl = SERVER.slice(protocol_index + 3) + "/" + data.key;
-    hours = data.hours;
-    error = false;
-  })
-  .catch(() => {
-    error = true;
-  });
-};
-const selectHashedUrl = () => {
-  const selection = window.getSelection();
-  const urlElement = document.querySelector("#hashedUrl");
-  selection.setBaseAndExtent(urlElement, 0, urlElement, 1);
-};
+  const SERVER = "https://lilhash.com";
+  let hours = 24;
+  let inputUrl = "";
+  let hashedUrl = "";
+  let error = false;
+  $: hashed = hashedUrl.length > 0;
+  const hash = () => {
+    fetch(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}`, {
+      method: 'POST',
+    })
+    .then(response => response.json())
+    .then((data) => {
+      const protocol_index = SERVER.indexOf("://");
+      hashedUrl = SERVER.slice(protocol_index + 3) + "/" + data.key;
+      hours = data.hours;
+      error = false;
+    })
+    .catch(() => {
+      error = true;
+    });
+  };
+  const selectHashedUrl = () => {
+    const selection = window.getSelection();
+    const urlElement = document.querySelector("#hashedUrl");
+    selection.setBaseAndExtent(urlElement, 0, urlElement, 1);
+  };
 </script>
 
 {#if !hashed}

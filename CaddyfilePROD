@@ -3,7 +3,7 @@
   redir @www.{args.0} https://{args.0}{uri}
 }
 
-lilhash.com {
-  import strip-www lilhash.com
+{DOMAIN} {
+  import strip-www {DOMAIN}
   reverse_proxy * 127.0.0.1:8000
 }

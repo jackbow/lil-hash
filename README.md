@@ -12,4 +12,5 @@ A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
 - [Fastify](https://fastify.io/) — backend
 
 ## Hosting
-See [hosting.md](https://github.com/jackbow/lil-hash/blob/main/hosting.md)
+1. Edit env file
+2. `source env && docker-compose up -d`

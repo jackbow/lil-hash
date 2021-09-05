@@ -1,0 +1,2 @@
+export ENVIRONMENT=DEV      # either DEV or PROD
+export DOMAIN="lilhash.com" # unused if ENVIRONMENT set to DEV

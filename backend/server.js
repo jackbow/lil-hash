@@ -19,12 +19,12 @@ const EXPIRATION_IN_HOURS = 24;
 const EXPIRATION_IN_SECONDS = EXPIRATION_IN_HOURS * 60 * 60; // * 60; // time till link expires
 const STATIC_ROOT_REGEX = /^.+\.(ico|svg|png)$/; // regex for files in static root (./dist)
 
-const redis = new Redis();
+const redis = new Redis({ host: 'redis' });
 const app = fastify({
   logger: {
     level: 'info',
     serializers: {
-      req (request) {
+      req(request) {
         return {
           url: request.url,
           "user-agent": request.headers["user-agent"],
@@ -48,7 +48,7 @@ if (process.env.FASTIFY_ENV === 'dev') {
 app.register(rate_limit, { max: 20, timeWindow: '1 minute' });
 app.register(helmet);
 app.register(compress);
-app.register(serve_static, { root: path.join(path.resolve(), 'frontend', 'dist') });
+app.register(serve_static, { root: path.join(path.resolve(), '..', 'frontend', 'dist') });
 
 app.get('/', async (req, res) => {
   res.sendFile('index.html');
@@ -61,8 +61,6 @@ app.get('/_assets/:file', async (req, res) => {
 app.get('/:key', async (req, res) => {
   if (STATIC_ROOT_REGEX.test(req.params.key)) {
     res.sendFile(req.params.key); // serve static root
-  } else if (req.params.key === 'log' && 'password' in req.query && req.query.password === process.env.FASTIFY_LOG_PW) {
-    res.sendFile('log', path.join(path.resolve()));
   } else {
     const url = await redis.get(req.params.key);
     if (url) res.redirect(url.includes('://') ? url : 'http://' + url);
@@ -83,7 +81,7 @@ app.post('/hash', { schema: { querystring: { url: { type: 'string' } } } }, asyn
 
 const start = async () => {
   try {
-    await app.listen(8000);
+    await app.listen(8000, '0.0.0.0');
   } catch (err) {
     app.log.error(err);
     process.exit(1);
