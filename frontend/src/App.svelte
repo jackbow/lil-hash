@@ -1,18 +1,16 @@
 <script>
-  const SERVER = "https://localhost";
   let hours = 24;
   let inputUrl = "";
   let hashedUrl = "";
   let error = false;
   $: hashed = hashedUrl.length > 0;
   const hash = () => {
-    fetch(`${SERVER}/hash?url=${encodeURIComponent(inputUrl)}`, {
+    fetch(`/hash?url=${encodeURIComponent(inputUrl)}`, {
       method: 'POST',
     })
     .then(response => response.json())
     .then((data) => {
-      const protocol_index = SERVER.indexOf("://");
-      hashedUrl = SERVER.slice(protocol_index + 3) + "/" + data.key;
+      hashedUrl = document.domain + "/" + data.key;
       hours = data.hours;
       error = false;
     })
