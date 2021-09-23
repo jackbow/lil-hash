@@ -1,5 +1,7 @@
 # [lil' hash](lilhash.com)
-A simple shareable URL shortener (a la [hamhash.com](hamhash.com)).
+An simple URL shortener that produces shortened URLS that are easily rememberable and speakable.
+<br>
+Inspired by [hamhash.com](https://hamhash.com) (RIP 🥀🪦).
 ![screenshot](https://i.imgur.com/gBwgUKS.png)
 
 ## Hosting
