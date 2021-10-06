@@ -1,9 +1,0 @@
-(strip-www) {
-  @www.{args.0} host www.{args.0}
-  redir @www.{args.0} https://{args.0}{uri}
-}
-
-{DOMAIN} {
-  import strip-www {DOMAIN}
-  reverse_proxy * 127.0.0.1:8000
-}

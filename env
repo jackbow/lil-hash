@@ -1,6 +1,0 @@
-export ENVIRONMENT=DEV # either DEV or PROD
-export DOMAIN="localhost"
-
-# for fastify to access the environment var
-export FASTIFY_ENV=$ENVIRONMENT
-export FASTIFY_REDIS_URL="redis://redis:6379"

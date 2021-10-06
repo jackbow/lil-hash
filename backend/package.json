@@ -1,25 +1,21 @@
 {
-  "name": "backend",
+  "private": true,
+  "name": "lilhash-worker",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "serve": "node server.js",
-    "dev": "node server.js | pino-pretty"
-  },
+  "description": "lilhash.com serverless backend",
+  "main": "worker.js",
   "type": "module",
-  "author": "",
-  "license": "ISC",
+  "module": "worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "author": "Jack Bowman",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "fastify": "^3.11.0",
-    "fastify-compress": "^3.4.1",
-    "fastify-cors": "^5.2.0",
-    "fastify-helmet": "^5.2.0",
-    "fastify-rate-limit": "^5.0.1",
-    "fastify-static": "^3.4.0",
-    "ioredis": "^4.19.4",
-    "make-promises-safe": "^5.1.0",
-    "st": "^2.0.0"
+    "itty-router": "^2.4.4"
   }
 }

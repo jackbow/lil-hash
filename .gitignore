@@ -1,5 +1,9 @@
-# fly.io
-fly.toml
+# cloudflare workers
+wrangler.toml
+/target
+/dist
+worker/
+.cargo-ok
 
 # Vite
 dist
