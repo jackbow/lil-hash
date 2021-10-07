@@ -31,9 +31,9 @@
 <p class="text-off-black text-xl text-black lg:text-2xl font-averia dark:text-white">
 	simple sharable url shortener
 </p>
-<label for="url" class="hidden">URL: </label>
+<label for="url" class="hidden"> URL to shorten </label>
 <input
-	name="url"
+	id="url"
 	bind:value={inputUrl}
 	class="shadow-inner rounded-md text-md w-3/5 md:w-1/2 lg:text-2xl p-2 md:p-3 lg:p-4 m-4 lg:my-10 text-center"
 	on:keyup={(e) => e.key === 'Enter' && hash()}
