@@ -1,0 +1,20 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  @apply bg-yellow-300;
+}
+.text-off-black {
+  color: #35332c;
+}
+.font-averia {
+  font-family: 'Averia Serif', sans-serif;
+  font-weight: 300;
+}

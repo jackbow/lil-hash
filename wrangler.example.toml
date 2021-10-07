@@ -1,0 +1,16 @@
+# Fill out the following
+name = "url-shortener"
+account_id= ""
+zone_id = ""
+route = "mydomain.com*"
+workers_dev = false # true if you don't have a domain
+kv_namespaces = [
+  { binding = "KV", id = "",  preview_id = "" }
+]
+
+# Don't change
+type = "webpack"
+usage_model = ""
+compatibility_flags = []
+compatibility_date = "2021-10-06"
+site = { bucket = "./build", entry-point = "./workers-site" }
