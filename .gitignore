@@ -5,3 +5,4 @@ build
 dist
 wrangler.toml
 workers-site
+.eslintcache

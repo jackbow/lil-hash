@@ -1,5 +1,5 @@
 <script>
-	import Footer from '$lib/Footer.svelte'
+	import Footer from '$lib/Footer.svelte';
 	import { goto } from '$app/navigation';
 	import isValidUrl from '$lib/valid-url.js';
 	let inputUrl = '';

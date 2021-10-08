@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export async function get({ params }) {
 	const { redirectKey } = params;
 	const url = await KV.get(redirectKey);
