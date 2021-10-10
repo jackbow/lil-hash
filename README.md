@@ -1,6 +1,6 @@
 # [lil' hash](lilhash.com)
 
-An simple URL shortener that produces easily rememberable and speakable shortened URLs.
+A simple URL shortener that produces easily rememberable and speakable shortened URLs.
 <br>
 The links expire after 24 hours so there's almost always a one word shortening available.
 <br>
