@@ -3,7 +3,9 @@
 		<a
 			href="https://jackbow.pages.dev/"
 			target="_blank"
+			rel="noopener"
 			class="hover:text-white transition duration-500"
+			aria-label="my personal website"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +26,9 @@
 		<a
 			href="https://github.com/jackbow/lil-hash"
 			target="_blank"
+			rel="noopener"
 			class="hover:text-white transition duration-500"
+			aria-label="website source code"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
