@@ -39,7 +39,6 @@
 		class="px-3 md:px-5 lg:px-8 py-2 md:py-3 lg:py-4 text-md lg:text-2xl rounded-md transition duration-500 bg-white shadow"
 		class:bg-red-500={errorText}
 		on:click={hash}
-		disabled
 		aria-label="shorten url"
 	>
 		{errorText ? errorText : 'hash'}
