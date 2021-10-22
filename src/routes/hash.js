@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-import random_phrase from '$lib/random-phrase/random-phrase.js';
-import isValidUrl from '$lib/valid-url.js';
+import random_phrase from '$lib/utility/random-phrase/random-phrase.js';
+import isValidUrl from '$lib/utility/valid-url.js';
 
 export async function post(request) {
 	let { url } = request.body;

@@ -1,7 +1,7 @@
 <script>
-	import Footer from '$lib/Footer.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import { goto } from '$app/navigation';
-	import isValidUrl from '$lib/valid-url.js';
+	import isValidUrl from '$lib/utility/valid-url.js';
 	let inputUrl = '';
 	let errorText = '';
 	const hash = () => {

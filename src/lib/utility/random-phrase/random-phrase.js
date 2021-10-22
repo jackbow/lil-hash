@@ -5,12 +5,7 @@ import simple from './lists/simple-words.js';
 
 const random_from = (arr) => arr[Math.floor(arr.length * Math.random())];
 const random_any = () =>
-	random_from([
-		random_from(adverbs),
-		random_from(adjectives),
-		random_from(nouns),
-		random_from(simple)
-	]);
+	random_from([random_from(adverbs), random_from(adjectives), random_from(nouns), random_from(simple)]);
 const random_phrase = (n = 1, sep = '-') => {
 	if (n === 1) return random_any();
 	const odd = n % 2 === 0;
