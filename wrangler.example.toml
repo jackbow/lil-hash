@@ -2,7 +2,7 @@
 name = "url-shortener"
 account_id= ""
 zone_id = ""
-route = "mydomain.com*"
+route = "*mydomain.com/*"
 workers_dev = false # true if you don't have a domain
 kv_namespaces = [
   { binding = "KV", id = "",  preview_id = "" }
