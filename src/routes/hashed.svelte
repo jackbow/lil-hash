@@ -28,18 +28,10 @@
 	});
 </script>
 
-<p class="text-off-black text-xl md:text-lg lg:text-2xl my-4 mt-40 font-averia dark:text-white">
-	your link been shortened to
-</p>
-<h1
-	on:click={selectHashedUrl}
-	id="hashedUrl"
-	class="text-off-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-averia dark:text-white"
->
+<p class="my-4 mt-40">your link been shortened to</p>
+<h1 on:click={selectHashedUrl} id="hashedUrl" class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
 	{hashedUrl}
 </h1>
-<p
-	class="text-off-black text-xl md:text-lg lg:text-2xl m-4 md:m-5 lg:m-8 font-averia dark:text-white"
->
+<p class="m-4 md:m-5 lg:m-8">
 	for the next {hours} hours
 </p>

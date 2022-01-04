@@ -4,17 +4,22 @@
 @tailwind utilities;
 
 html {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Averia Serif', Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	@apply bg-yellow-300;
+	color: #35332c;
+	background-color: rgb(252, 211, 77);
+	@apply dark:bg-black text-center font-light dark:text-gray-300;
 }
+
+p {
+	@apply text-xl md:text-lg lg:text-2xl;
+}
+
+.font-sans {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
 .text-off-black {
 	color: #35332c;
-}
-.font-averia {
-	font-family: 'Averia Serif', sans-serif;
-	font-weight: 300;
 }

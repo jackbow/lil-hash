@@ -16,6 +16,7 @@ Inspired by [hamhash.com](https://hamhash.com) (RIP 🥀🪦).
 ## To do
 
 - [x] Route on hash so back button works as expected.
+- [x] Fix dark mode.
 
 ## Tech
 
@@ -24,3 +25,8 @@ Globally deployed serverlessly with server-side rendering.
 - [Svelte Kit](https://kit.svelte.dev/) — Frontend framework
 - [Tailwindcss](https://tailwindcss.com/) — Styling
 - [Cloudflare Workers](https://workers.cloudflare.com/) — Serverless hosting
+
+## Design
+
+- [Averia Serif](http://iotic.com/averia/)
+- [Tabler Icons](https://tabler-icons.io/)
