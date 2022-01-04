@@ -13,4 +13,4 @@ type = "webpack"
 usage_model = ""
 compatibility_flags = []
 compatibility_date = "2021-10-06"
-site = { bucket = "./build", entry-point = "./workers-site" }
+site = { bucket = "./dist", entry-point = "./workers-site" }
