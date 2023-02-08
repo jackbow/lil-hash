@@ -29,7 +29,16 @@
 </script>
 
 <p class="my-4 mt-40">your link has been shortened to</p>
-<h1 on:click={selectHashedUrl} id="hashedUrl" class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+<h1
+	on:click={selectHashedUrl}
+	on:keypress={(e) => {
+		if (e.key === 'Enter') {
+			selectHashedUrl();
+		}
+	}}
+	id="hashedUrl"
+	class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+>
 	{hashedUrl}
 </h1>
 <p class="m-4 md:m-5 lg:m-8">
