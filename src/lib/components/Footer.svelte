@@ -4,13 +4,7 @@
 
 <footer class="width-screen mt-2 dark:text-gray-300">
 	<div class="margin-auto flex justify-center space-x-4">
-		<a
-			href="https://jackbow.pages.dev/"
-			target="_blank"
-			rel="noopener"
-			class={linkclasses}
-			aria-label="my personal website"
-		>
+		<a href="https://jackbow.pages.dev/" class={linkclasses} aria-label="my personal website">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -45,13 +39,7 @@
 				<polyline points="3 7 12 13 21 7" />
 			</svg>
 		</a>
-		<a
-			href="https://github.com/jackbow/lil-hash"
-			target="_blank"
-			rel="noopener"
-			class={linkclasses}
-			aria-label="website source code"
-		>
+		<a href="https://github.com/jackbow/lil-hash" class={linkclasses} aria-label="website source code">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
