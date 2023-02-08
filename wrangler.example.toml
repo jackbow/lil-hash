@@ -1,16 +1,17 @@
 # Fill out the following
 name = "url-shortener"
-account_id= ""
-zone_id = ""
-route = "*mydomain.com/*"
+routes = [{ pattern = "*mydomain.com/*", zone_id = "" }]
 workers_dev = false # true if you don't have a domain
 kv_namespaces = [
   { binding = "KV", id = "",  preview_id = "" }
 ]
 
+# Optional
+# account_id= ""
+
 # Don't change
-type = "webpack"
-usage_model = ""
+usage_model = "bundled"
 compatibility_flags = []
-compatibility_date = "2021-10-06"
-site = { bucket = "./dist", entry-point = "./workers-site" }
+compatibility_date = "2023-02-07"
+site = { bucket = "./dist" }
+main = "workers-site/index.js"
